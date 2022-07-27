@@ -6,8 +6,8 @@ import Link from "next/link";
 const Home: NextPage = () => {
   return (
     <div>
-      <h1>helloooo</h1>
       <Link href="/login">login</Link>
+      <Link href="/register">Register</Link>
     </div>
   );
 };
