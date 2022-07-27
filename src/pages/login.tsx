@@ -1,10 +1,11 @@
 import React from "react";
-import Link from "next/link";
+import { Text } from "@mantine/core";
 
 export default function Login() {
   return (
     <div>
-      <p>hello</p>
+      <p>hello world</p>
+      <Text>mische</Text>
     </div>
   );
 }
