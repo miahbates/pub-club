@@ -21,6 +21,20 @@ export const PubTheme = (
       lg: 24,
       xl: 32,
     },
+    fontSizes: {
+      xs: 12,
+      sm: 14,
+      md: 16,
+      lg: 18,
+      xl: 24,
+    },
+    radius: {
+      xs: 12,
+      sm: 16,
+      md: 26,
+      lg: 32,
+    },
+    lineHeight: "22px",
     colors: {
       blue: [
         blue[0],
@@ -34,6 +48,36 @@ export const PubTheme = (
         $blue800,
         blue[9],
       ],
+    },
+    headings: {
+      fontFamily: "Mulish",
+      fontWeight: "bold",
+      sizes: {
+        h1: {
+          fontSize: "48px",
+          lineHeight: "54px",
+        },
+        h2: {
+          fontSize: "32px",
+          lineHeight: "40px",
+        },
+        h3: {
+          fontSize: "24px",
+          lineHeight: "36px",
+        },
+        h4: {
+          fontSize: "22px",
+          lineHeight: "28px",
+        },
+        h5: {
+          fontSize: "20px",
+          lineHeight: "24px",
+        },
+        h6: {
+          fontSize: "18px",
+          lineHeight: "28px",
+        },
+      },
     },
   };
 };
