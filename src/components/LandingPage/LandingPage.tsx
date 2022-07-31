@@ -1,9 +1,10 @@
 import { Button, Group, Text } from "@mantine/core";
-import Link from "next/link";
+import { useRouter } from "next/router";
 import useStyles from "./styles";
 
 const LandingPage: React.FC = () => {
   const { classes } = useStyles();
+  const router = useRouter();
 
   return (
     <div className={classes.bgImage}>
@@ -12,12 +13,22 @@ const LandingPage: React.FC = () => {
       </Text>
 
       <Group className={classes.flexRow}>
-        <Button className={classes.login}>
-          <Link href="/login">login</Link>
+        <Button
+          variant="gradient"
+          gradient={{ from: "teal", to: "blue", deg: 60 }}
+          className={classes.login}
+          onClick={() => router.push("/login")}
+        >
+          Login
         </Button>
 
-        <Button className={classes.register}>
-          <Link href="/register">Register</Link>
+        <Button
+          variant="gradient"
+          gradient={{ from: "#ed6ea0", to: "#ec8c69", deg: 35 }}
+          onClick={() => router.push("/register")}
+          className={classes.register}
+        >
+          Register
         </Button>
       </Group>
     </div>

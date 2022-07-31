@@ -2,7 +2,7 @@ import { createStyles } from "@mantine/core";
 
 const useStyles = createStyles((theme) => ({
   bgImage: {
-    backgroundImage: `url("https://images.unsplash.com/photo-1493118679111-17759f85f8ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1754&q=80")`,
+    backgroundImage: `url("https://images.unsplash.com/photo-1506803034607-ba76423b765a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80")`,
     height: "100%",
     width: "100%",
     display: "flex",
@@ -13,14 +13,15 @@ const useStyles = createStyles((theme) => ({
   heading: {
     fontSize: "52px",
     textAlign: "center",
+    color: "white",
   },
   login: {
-    backgroundColor: "blue",
+    // backgroundColor: "blue",
     textDecoration: "none",
     width: "100px",
   },
   register: {
-    backgroundColor: "red",
+    // backgroundColor: "red",
     textDecoration: "none",
     width: "100px",
   },
