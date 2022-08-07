@@ -8,29 +8,31 @@ const LandingPage: React.FC = () => {
 
   return (
     <div className={classes.bgImage}>
-      <Text className={classes.heading} component="h1">
-        Pub Club
-      </Text>
+      <div className={classes.innerWrapper}>
+        <Text className={classes.heading} component="h1">
+          Pub Club &#127867;
+        </Text>
 
-      <Group className={classes.flexRow}>
-        <Button
-          variant="gradient"
-          gradient={{ from: "teal", to: "blue", deg: 60 }}
-          className={classes.login}
-          onClick={() => router.push("/login")}
-        >
-          Login
-        </Button>
+        <Group className={classes.flexRow}>
+          <Button
+            variant="gradient"
+            gradient={{ from: "teal", to: "blue", deg: 60 }}
+            className={classes.login}
+            onClick={() => router.push("/login")}
+          >
+            Login
+          </Button>
 
-        <Button
-          variant="gradient"
-          gradient={{ from: "#ed6ea0", to: "#ec8c69", deg: 35 }}
-          onClick={() => router.push("/register")}
-          className={classes.register}
-        >
-          Register
-        </Button>
-      </Group>
+          <Button
+            variant="gradient"
+            gradient={{ from: "#ed6ea0", to: "#ec8c69", deg: 35 }}
+            onClick={() => router.push("/register")}
+            className={classes.register}
+          >
+            Register
+          </Button>
+        </Group>
+      </div>
     </div>
   );
 };

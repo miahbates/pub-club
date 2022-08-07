@@ -9,25 +9,32 @@ const useStyles = createStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     objectFit: "cover",
+    // backgroundRepeat: "no-repeat",
+    backgroundSize: "auto",
   },
   heading: {
     fontSize: "52px",
     textAlign: "center",
-    color: "white",
+    color: "black",
   },
   login: {
-    // backgroundColor: "blue",
     textDecoration: "none",
     width: "100px",
   },
   register: {
-    // backgroundColor: "red",
     textDecoration: "none",
     width: "100px",
   },
   flexRow: {
     display: "flex",
     justifyContent: "center",
+  },
+  innerWrapper: {
+    background: "white",
+    margin: "0 auto",
+    padding: theme.spacing.xl,
+    borderRadius: "5%",
+    boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
   },
 }));
 
