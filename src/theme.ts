@@ -13,7 +13,7 @@ export const PubTheme = (
     colors: { blue },
   } = defaultTheme;
   return {
-    fontFamily: "Mulish",
+    fontFamily: "Oswald",
     spacing: {
       xs: 8,
       sm: 12,
