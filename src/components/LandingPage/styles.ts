@@ -1,21 +1,24 @@
-import { createStyles } from "@mantine/core";
+import { Autocomplete, createStyles } from "@mantine/core";
 
 const useStyles = createStyles((theme) => ({
-  bgImage: {
-    backgroundImage: `url("https://images.pexels.com/photos/2457317/pexels-photo-2457317.png?cs=srgb&dl=pexels-anni-roenkae-2457317.jpg&fm=jpg")`,
-    height: "100%",
-    width: "100%",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
+  logo: {
+    borderRadius: "5px",
+    padding: theme.spacing.lg,
   },
-  heading: {
-    fontSize: "52px",
-    textAlign: "center",
-    color: "black",
-    fontFamily: "Oswald",
+  flexColumn: {
+    // display: "flex",
+    // flexDirection: "column",
+    // justifyContent: "center",
+    // alignContent: "center",
+    borderRadius: "5px",
+    boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+    // margin: theme.spacing.xl,
+    // padding: theme.spacing.lg,
+    [`@media (min-width: ${theme.breakpoints.sm}px)`]: {
+      width: "50%",
+      margin: "6rem auto",
+      // padding: `2 * ${theme.spacing.lg}`,
+    },
   },
   login: {
     textDecoration: "none",
@@ -26,15 +29,14 @@ const useStyles = createStyles((theme) => ({
     width: "100px",
   },
   flexRow: {
-    display: "flex",
-    justifyContent: "center",
+    // display: "flex",
+    // justifyContent: "space-between",
   },
-  innerWrapper: {
-    background: "white",
-    margin: "0 auto",
-    padding: "4rem 2rem",
-    borderRadius: "10px",
-    boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+  wrapper: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
   },
 }));
 

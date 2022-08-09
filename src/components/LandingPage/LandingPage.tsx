@@ -1,4 +1,5 @@
 import { Button, Group, Text } from "@mantine/core";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import useStyles from "./styles";
 
@@ -7,13 +8,16 @@ const LandingPage: React.FC = () => {
   const router = useRouter();
 
   return (
-    <div className={classes.bgImage}>
-      <div className={classes.innerWrapper}>
-        <Text className={classes.heading} component="h1">
-          Pub Club &#127867;
-        </Text>
-
-        <Group className={classes.flexRow}>
+    <div className={classes.wrapper}>
+      <Group className={classes.flexColumn} mt="xl">
+        <Image
+          src="/pubclublogo.png"
+          alt="pub club logo"
+          width={250}
+          height={250}
+          className={classes.logo}
+        ></Image>
+        <Group className={classes.flexRow} mt="lg">
           <Button
             variant="gradient"
             gradient={{ from: "teal", to: "blue", deg: 60 }}
@@ -22,7 +26,6 @@ const LandingPage: React.FC = () => {
           >
             Login
           </Button>
-
           <Button
             variant="gradient"
             gradient={{ from: "#ed6ea0", to: "#ec8c69", deg: 35 }}
@@ -32,7 +35,7 @@ const LandingPage: React.FC = () => {
             Register
           </Button>
         </Group>
-      </div>
+      </Group>
     </div>
   );
 };
