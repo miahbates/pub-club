@@ -17,3 +17,5 @@ const db = new Pool({
 
 // export the pool object so we can query the DB in other files
 module.exports = db;
+
+export {};
