@@ -6,16 +6,16 @@ const useStyles = createStyles((theme) => ({
     padding: theme.spacing.lg,
   },
   flexColumn: {
-    // display: "flex",
-    // flexDirection: "column",
-    // justifyContent: "center",
-    // alignContent: "center",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignContent: "center",
     borderRadius: "5px",
     boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-    // margin: theme.spacing.xl,
-    // padding: theme.spacing.lg,
+    margin: theme.spacing.xl,
+    padding: theme.spacing.lg,
     [`@media (min-width: ${theme.breakpoints.sm}px)`]: {
-      width: "50%",
+      width: "40%",
       margin: "6rem auto",
       // padding: `2 * ${theme.spacing.lg}`,
     },
@@ -31,12 +31,6 @@ const useStyles = createStyles((theme) => ({
   flexRow: {
     // display: "flex",
     // justifyContent: "space-between",
-  },
-  wrapper: {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
   },
 }));
 
