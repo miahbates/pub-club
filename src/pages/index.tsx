@@ -1,15 +1,8 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
+import { LandingPage } from "../components";
 
 const Home: NextPage = () => {
-  return (
-    <div>
-      <h1>helloooo</h1>
-      <Link href="/login">login</Link>
-    </div>
-  );
+  return <LandingPage />;
 };
 
 export default Home;

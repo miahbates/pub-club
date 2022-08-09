@@ -28,9 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             },
           }}
         >
-          <div>
-            <Component {...pageProps} />
-          </div>
+          <Component {...pageProps} />
         </AppShell>
       </MantineProvider>
     </>
