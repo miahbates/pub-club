@@ -1,5 +1,4 @@
-import { Button, Group, Text } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
+import { Button, Group } from "@mantine/core";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import useStyles from "./styles";
@@ -7,11 +6,10 @@ import useStyles from "./styles";
 const LandingPage: React.FC = () => {
   const { classes } = useStyles();
   const router = useRouter();
-  const isMobile = useMediaQuery("(max-width: 768px)");
 
   return (
-    <div>
-      <Group className={classes.flexColumn} mt="xl">
+    <div className={classes.wrapper}>
+      <Group className={classes.flexColumn}>
         <Image
           src="/pubclublogo.png"
           alt="pub club logo"
@@ -19,7 +17,7 @@ const LandingPage: React.FC = () => {
           height={250}
           className={classes.logo}
         ></Image>
-        <Group className={classes.flexRow} mt="lg">
+        <Group mt="lg">
           <Button
             variant="gradient"
             gradient={{ from: "teal", to: "blue", deg: 60 }}
