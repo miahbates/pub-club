@@ -28,10 +28,10 @@ const useStyles = createStyles((theme) => ({
     justifyContent: "center",
     alignContent: "center",
     height: "90%",
-    width: "40%",
+    width: "25%",
     margin: "0 auto",
     textAlign: "center",
-    [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
+    [`@media (max-width: ${theme.breakpoints.md}px)`]: {
       width: "80%",
       justifyContent: "start",
       marginTop: "8%",
