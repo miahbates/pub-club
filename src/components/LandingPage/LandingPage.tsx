@@ -1,5 +1,4 @@
-import { Button, Group, Text } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
+import { Button, Group } from "@mantine/core";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import useStyles from "./styles";
@@ -7,7 +6,6 @@ import useStyles from "./styles";
 const LandingPage: React.FC = () => {
   const { classes } = useStyles();
   const router = useRouter();
-  const isMobile = useMediaQuery("(max-width: 768px)");
 
   return (
     <div className={classes.wrapper}>
