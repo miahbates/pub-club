@@ -10,8 +10,8 @@ const LandingPage: React.FC = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
   return (
-    <div>
-      <Group className={classes.flexColumn} mt="xl">
+    <div className={classes.wrapper}>
+      <Group className={classes.flexColumn}>
         <Image
           src="/pubclublogo.png"
           alt="pub club logo"
@@ -19,7 +19,7 @@ const LandingPage: React.FC = () => {
           height={250}
           className={classes.logo}
         ></Image>
-        <Group className={classes.flexRow} mt="lg">
+        <Group mt="lg">
           <Button
             variant="gradient"
             gradient={{ from: "teal", to: "blue", deg: 60 }}
