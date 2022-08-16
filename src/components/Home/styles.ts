@@ -16,7 +16,7 @@ const useStyles = createStyles((theme) => ({
   },
   login: {
     textDecoration: "none",
-    width: "150px",
+    width: "100px",
   },
   register: {
     textDecoration: "none",
