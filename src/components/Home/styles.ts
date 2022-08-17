@@ -31,11 +31,7 @@ const useStyles = createStyles((theme) => ({
     width: "25%",
     margin: "0 auto",
     textAlign: "center",
-    [`@media (max-width: ${theme.breakpoints.md}px)`]: {
-      width: "80%",
-      justifyContent: "start",
-      marginTop: "8%",
-    },
+    color: "white",
   },
 }));
 

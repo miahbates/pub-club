@@ -1,3 +1,4 @@
+import { withTheme } from "@emotion/react";
 import { createStyles } from "@mantine/core";
 
 const useStyles = createStyles((theme) => ({
@@ -13,6 +14,7 @@ const useStyles = createStyles((theme) => ({
     borderRadius: "5px",
     boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
     padding: theme.spacing.lg,
+    background: "white",
   },
   login: {
     textDecoration: "none",

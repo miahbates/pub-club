@@ -26,6 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             main: {
               width: "100%",
               padding: 0,
+              background: "black",
             },
           }}
         >
