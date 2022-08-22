@@ -1,4 +1,3 @@
-import { withTheme } from "@emotion/react";
 import { createStyles } from "@mantine/core";
 
 const useStyles = createStyles((theme) => ({
@@ -14,11 +13,10 @@ const useStyles = createStyles((theme) => ({
     borderRadius: "5px",
     boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
     padding: theme.spacing.lg,
-    background: "white",
   },
   login: {
     textDecoration: "none",
-    width: "150px",
+    width: "100px",
   },
   register: {
     textDecoration: "none",
@@ -33,11 +31,7 @@ const useStyles = createStyles((theme) => ({
     width: "25%",
     margin: "0 auto",
     textAlign: "center",
-    [`@media (max-width: ${theme.breakpoints.md}px)`]: {
-      width: "80%",
-      justifyContent: "start",
-      marginTop: "8%",
-    },
+    color: "white",
   },
 }));
 

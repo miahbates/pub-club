@@ -19,20 +19,13 @@ const LandingPage: React.FC = () => {
         ></Image>
         <Group mt="lg">
           <Button
+            component="a"
+            href="/api/auth/login?returnTo=/home"
             variant="gradient"
             gradient={{ from: "teal", to: "blue", deg: 60 }}
             className={classes.login}
-            onClick={() => router.push("/login")}
           >
-            Login
-          </Button>
-          <Button
-            variant="gradient"
-            gradient={{ from: "#ed6ea0", to: "#ec8c69", deg: 35 }}
-            onClick={() => router.push("/register")}
-            className={classes.register}
-          >
-            Register
+            Login / Register
           </Button>
         </Group>
       </Group>
