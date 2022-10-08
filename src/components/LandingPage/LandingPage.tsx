@@ -20,7 +20,7 @@ const LandingPage: React.FC = () => {
         <Group mt="lg">
           <Button
             component="a"
-            href="/api/auth/login?returnTo=/home"
+            href="/api/auth/login?returnTo=/api/login"
             variant="gradient"
             gradient={{ from: "teal", to: "blue", deg: 60 }}
             className={classes.login}
