@@ -31,7 +31,6 @@ const useStyles = createStyles((theme) => ({
     width: "25%",
     margin: "0 auto",
     textAlign: "center",
-    color: "white",
   },
 }));
 
