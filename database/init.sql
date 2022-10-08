@@ -2,8 +2,7 @@ DROP TABLE IF EXISTS users, sessions CASCADE;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
-  email text UNIQUE NOT NULL,
-  password text NOT NULL
+  email text UNIQUE NOT NULL
 );
 
 CREATE TABLE sessions (
@@ -15,6 +14,6 @@ INSERT INTO sessions (sid, data) VALUES
 ('12323245556', 'data' ),
 ('98876352628', 'more-data' );
 
-INSERT INTO users (email, password) VALUES
-  ('juliette@juliette.com', '123'),
-  ('oli@oli.com', '123');
+INSERT INTO users (email) VALUES
+  ('juliette@juliette.com'),
+  ('oli@oli.com');

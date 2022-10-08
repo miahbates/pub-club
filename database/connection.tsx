@@ -1,5 +1,5 @@
 // Inside file add
-const { Pool } = require("pg");
+import { Pool } from "pg";
 
 // DB URL should either be read from .env in development
 // or set as part of production deployment (e.g. on Heroku)
@@ -15,7 +15,4 @@ const db = new Pool({
   connectionString: process.env.DATABASE_URL,
 });
 
-// export the pool object so we can query the DB in other files
-module.exports = db;
-
-export {};
+export default db;

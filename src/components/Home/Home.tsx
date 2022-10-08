@@ -1,7 +1,5 @@
 import { useUser } from "@auth0/nextjs-auth0";
-import { Button, Group } from "@mantine/core";
-import Image from "next/image";
-import { useRouter } from "next/router";
+import { Button } from "@mantine/core";
 import useStyles from "./styles";
 
 const Home: React.FC = () => {
@@ -21,7 +19,7 @@ const Home: React.FC = () => {
       >
         Logout
       </Button>
-      <div className={classes.wrapper}>{`Welcome ${user?.user?.name}`}</div>;
+      <div className={classes.wrapper}>{`Welcome ${user?.user?.name}`}</div>
     </div>
   );
 };
