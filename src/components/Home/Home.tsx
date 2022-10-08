@@ -19,7 +19,7 @@ const Home: React.FC = () => {
       >
         Logout
       </Button>
-      <div className={classes.wrapper}>{`Welcome ${user?.user?.name}`}</div>;
+      <div className={classes.wrapper}>{`Welcome ${user?.user?.name}`}</div>
     </div>
   );
 };
