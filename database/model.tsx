@@ -30,3 +30,8 @@ export const getVenues = () => {
     return result.rows;
   });
 };
+
+export const deleteVenue = (id: number) => {
+  const DELETE_VENUE = `DELETE FROM venues WHERE id = $1`;
+  return db.query(DELETE_VENUE, [id]);
+};

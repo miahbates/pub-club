@@ -17,7 +17,7 @@ const Home: React.FC<THomeProps> = ({ venues }) => {
   const { classes } = useStyles();
   const user = useUser();
 
-  console.log("🚀 ~ file: Home.tsx:18 ~ user", user);
+  // console.log("🚀 ~ file: Home.tsx:18 ~ user", user);
 
   const router = useRouter();
   // Call this function whenever you want to refresh props!
@@ -44,17 +44,47 @@ const Home: React.FC<THomeProps> = ({ venues }) => {
       refreshData();
     }
 
-    console.log("result", result);
+    console.log(result);
+  };
+
+  const handleDeleteVenue = async (
+    values: { id: number },
+    event: React.FormEvent<HTMLFormElement>
+  ) => {
+    console.log("🚀 ~ file: Home.tsx:54 ~ values", values);
+    console.log("🚀 ~ file: Home.tsx:54 ~ event", event);
+
+    event.preventDefault();
+    const res = await fetch("/api/delete-venue", {
+      body: JSON.stringify(values),
+      headers: {
+        "Content-Type": "application/json",
+        "x-xhr": "true",
+      },
+      method: "POST",
+    });
+    const result = await res.json();
+
+    if (res.status < 300) {
+      refreshData();
+    }
+    console.log("🚀 ~ file: Home.tsx:63 ~ result", result);
   };
 
   const form = useForm({
     initialValues: {
       name: "",
     },
-
+    // TODO: add validation
     // validate: {
     //   pubName: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email"),
     // },
+  });
+
+  const deleteForm = useForm({
+    initialValues: {
+      id: -1,
+    },
   });
 
   return (
@@ -83,36 +113,38 @@ const Home: React.FC<THomeProps> = ({ venues }) => {
             {...form.getInputProps("name")}
           />
           <Group position="right" mt="md">
-            <Button type="submit">Submit</Button>
+            <Button type="submit">Add pub</Button>
           </Group>
         </form>
       </Box>
 
       <div>List all pubs</div>
       <ul>
-        {venues.map((venue) => (
-          <li key={venue.id}>{venue.name}</li>
-        ))}
+        {venues.map((venue) => {
+          return (
+            <>
+              <li key={venue.id}>{venue.name}</li>
+              <form
+                method="POST"
+                action="/api/delete-venue"
+                onSubmit={deleteForm.onSubmit(handleDeleteVenue)}
+              >
+                <Button
+                  type="submit"
+                  name="id"
+                  value={venue.id}
+                  variant="gradient"
+                  gradient={{ from: "#ed6ea0", to: "#ec8c69", deg: 35 }}
+                  className={classes.register}
+                >
+                  Delete Pub
+                </Button>
+              </form>
+            </>
+          );
+        })}
       </ul>
 
-      <Button
-        component="a"
-        // href="/api/auth/logout"
-        variant="gradient"
-        gradient={{ from: "#ed6ea0", to: "#ec8c69", deg: 35 }}
-        className={classes.register}
-      >
-        Add Pub
-      </Button>
-      <Button
-        component="a"
-        // href="/api/auth/logout"
-        variant="gradient"
-        gradient={{ from: "#ed6ea0", to: "#ec8c69", deg: 35 }}
-        className={classes.register}
-      >
-        Delete Pub
-      </Button>
       <div className={classes.wrapper}>{`Welcome ${user?.user?.name}`}</div>
     </div>
   );

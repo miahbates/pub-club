@@ -1,24 +1,28 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
-import { addVenue } from "../../../database/model";
+import { addVenue, deleteVenue } from "../../../database/model";
 
 type Data = {
-  name: string;
+  id: string;
 };
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
+  // get request body
   const body = req.body;
+
+  // { name: "The Venue" }
 
   console.log("received", body);
 
-  const inserted = await addVenue(body);
+  // delete from database
+  await deleteVenue(parseInt(body.id));
 
   if (req.headers["x-xhr"] == "true") {
-    res.status(200).json(inserted);
+    res.status(200).send(body);
   } else {
-    res.redirect("/home?venueAdded=true");
+    res.redirect("/home?venueDeleted=true");
   }
 }
