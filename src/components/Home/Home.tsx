@@ -20,8 +20,7 @@ const Home: React.FC<THomeProps> = ({ venues }) => {
   console.log("🚀 ~ file: Home.tsx:18 ~ user", user);
 
   const router = useRouter();
-  // Call this function whenever you want to
-  // refresh props!
+  // Call this function whenever you want to refresh props!
   const refreshData = () => {
     router.replace(router.asPath);
   };
