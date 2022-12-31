@@ -8,10 +8,10 @@ export default withApiAuthRequired(async function handler(req, res) {
     const searchDbUsersQuery = await searchDbUsers(session?.user.email);
     if (searchDbUsersQuery) {
       console.log(searchDbUsersQuery, "searchDbUsersQuery");
-      res.redirect(301, "/home");
+      return res.redirect(301, "/home");
     } else {
       await createUser(session.user.email);
-      res.redirect(301, "/home");
+      return res.redirect(301, "/home");
     }
   }
 
