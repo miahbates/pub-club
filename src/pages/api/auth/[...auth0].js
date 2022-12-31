@@ -10,6 +10,7 @@ export default handleAuth({
     try {
       await handleCallback(req, res, { afterCallback });
     } catch (error) {
+      console.log(error, "auth error");
       res.status(error.status || 500).end(error.message);
     }
   },
