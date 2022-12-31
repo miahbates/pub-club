@@ -5,9 +5,12 @@ const afterCallback = (req, res, session, state) => {
   return session;
 };
 
+console.log("BASE URL", process.env.AUTH0_BASE_URL);
+
 export default handleAuth({
   async callback(req, res) {
     try {
+      console.log("BASE URL", process.env.AUTH0_BASE_URL);
       await handleCallback(req, res, { afterCallback });
     } catch (error) {
       console.log(error, "auth error");
