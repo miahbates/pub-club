@@ -9,7 +9,7 @@ const useStyles = createStyles((theme) => ({
   wrapper: {
     backgroundImage: "url('./login-background-image.avif')",
     backgroundSize: "cover",
-    height: "100%",
+    height: "60%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
