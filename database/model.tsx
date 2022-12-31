@@ -16,3 +16,17 @@ export const searchDbUsers = (email: string) => {
     return null;
   });
 };
+
+export const addVenue = ({ name }: { name: string }) => {
+  const ADD_VENUE = `INSERT INTO venues(name) VALUES($1) RETURNING *`;
+  return db.query(ADD_VENUE, [name]).then((result: any) => {
+    return result.rows[0];
+  });
+};
+
+export const getVenues = () => {
+  const GET_VENUES = `SELECT * FROM venues`;
+  return db.query(GET_VENUES).then((result) => {
+    return result.rows;
+  });
+};
