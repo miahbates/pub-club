@@ -27,7 +27,7 @@ const LandingPage: React.FC = () => {
           >
             Login / Register
           </Button>
-          Base URL ${process.env.AUTH0_BASE_URL} ${process.env.VERCEL_URL}
+          Base URL ${process.env.AUTH0_BASE_URL} - ${process.env.VERCEL_URL}
         </Group>
       </Group>
     </div>
